@@ -10,6 +10,17 @@
 npm install @waltz-controls/waltz-user-context-plugin --registry=https://npm.pkg.github.com/waltz-controls
 ```
 
+## Usage
+
+```js
+//main.js
+app.registerController(new UserContextController())
+     .run()
+     
+//foo.js
+const userContext = await app.getContext(kUser);
+```
+
 
 ## Runtime dependencies:
 
