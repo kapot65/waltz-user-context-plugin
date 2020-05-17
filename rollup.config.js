@@ -6,10 +6,10 @@ import pkg from './package.json';
 export default [
     // browser-friendly UMD build
     {
-        input: 'src/*.js',
-        external: ['@waltz-controls/middleware', 'rxjs', 'rxjs/operators', 'rxjs/fetch'],
+        input: 'src/**/*.js',
+        external: ['@waltz-controls/middleware', 'controllers/log','rxjs', 'rxjs/operators', 'rxjs/fetch'],
         output: {
-            file: pkg.module,
+            dir: 'dist',
             format: 'es',
             sourcemap: 'inline'
         },
@@ -17,7 +17,8 @@ export default [
             resolve(), // so Rollup can find `ms`
             commonjs(), // so Rollup can convert `ms` to an ES module
             multi()
-        ]
+        ],
+        preserveModules: true
     },
     {
         input: 'test/run.js',

@@ -4,11 +4,14 @@
 [![Docs](https://img.shields.io/badge/Docs-Generated-green.svg)]()
 
 
-# XXX
-
-
+# waltz-user-context-plugin
 
 ```bash
-npm install @waltz-controls/XXX --registry=https://npm.pkg.github.com/waltz-controls
+npm install @waltz-controls/waltz-user-context-plugin --registry=https://npm.pkg.github.com/waltz-controls
 ```
 
+
+## Runtime dependencies:
+
+1. UserContext backend
+2. Waltz

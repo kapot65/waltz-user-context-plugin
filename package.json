@@ -1,22 +1,23 @@
 {
-  "name": "@waltz-controls/XXX",
+  "name": "@waltz-controls/waltz-user-context-plugin",
   "version": "1.0.0",
-  "description": "XXX",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "description": "Waltz plugin for UserContext",
+  "main": "dist/_virtual/index.esm.js",
+  "module": "dist/_virtual/index.esm.js",
   "watch": {
     "build": "{src,test}/*.js"
   },
   "scripts": {
     "clean": "rm -rf dist",
     "build": "rollup -c",
+    "prepublishOnly": "mv dist/_virtual/_rollup:plugin-multi-entry:entry-point dist/_virtual/index.esm.js",
     "watch": "rollup -c -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waltz-controls/XXX.git"
+    "url": "git+https://github.com/waltz-controls/waltz-user-context-plugin.git"
   },
-  "keywords": [    
+  "keywords": [
     "waltz",
     "waltz-controls",
     "webix"
@@ -24,9 +25,9 @@
   "author": "Ingvord",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/waltz-controls/XXX/issues"
+    "url": "https://github.com/waltz-controls/waltz-user-context-plugin/issues"
   },
-  "homepage": "https://github.com/waltz-controls/XXX#readme",
+  "homepage": "https://github.com/waltz-controls/waltz-user-context-plugin#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-multi-entry": "^3.0.0",
