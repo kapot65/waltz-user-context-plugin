@@ -1,0 +1,39 @@
+{
+  "name": "@waltz-controls/XXX",
+  "version": "1.0.0",
+  "description": "XXX",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "watch": {
+    "build": "{src,test}/*.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waltz-controls/XXX.git"
+  },
+  "keywords": [    
+    "waltz",
+    "waltz-controls",
+    "webix"
+  ],
+  "author": "Ingvord",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waltz-controls/XXX/issues"
+  },
+  "homepage": "https://github.com/waltz-controls/XXX#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-multi-entry": "^3.0.0",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^2.3.4"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.5"
+  }
+}
