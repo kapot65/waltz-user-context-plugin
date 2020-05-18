@@ -1,6 +1,6 @@
 {
   "name": "@waltz-controls/waltz-user-context-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Waltz plugin for UserContext",
   "main": "dist/_virtual/index.esm.js",
   "module": "dist/_virtual/index.esm.js",

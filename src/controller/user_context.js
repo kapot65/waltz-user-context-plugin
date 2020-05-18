@@ -1,7 +1,6 @@
 import {Controller} from "@waltz-controls/middleware";
-import {kUser} from "../context";
 import {UserContext} from "../model/user_context";
-import {kChannelLog, kTopicError} from "controllers/log";
+import {kChannelLog, kTopicError, kUser} from "../context";
 
 export const kControllerUserContext = 'controller:user_context';
 export const kUserContext = 'context:user_context';
