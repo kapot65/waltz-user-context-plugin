@@ -7,7 +7,7 @@ export default [
     // browser-friendly UMD build
     {
         input: 'src/**/*.js',
-        external: ['@waltz-controls/middleware', 'controllers/log','rxjs', 'rxjs/operators', 'rxjs/fetch'],
+        external: pkg.runtimeDependencies,
         output: {
             dir: 'dist',
             format: 'es',

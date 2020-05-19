@@ -32,17 +32,28 @@ function defaultUserContext(user){
     return btoa(JSON.stringify(new UserContext({user, tango_hosts:{}, device_filters:["*/*/*"], ext:{}})))
 }
 
+/**
+ * @type UserContextController
+ * @extends Controller
+ */
 export class UserContextController extends Controller {
-    constructor() {
-        super(kControllerUserContext);
+    /**
+     *
+     * @param {Application} app
+     * @constructor
+     */
+    constructor(app) {
+        super(kControllerUserContext, app);
     }
 
-    config(){
-    }
-
-    async run(){
+    /**
+     * Inserts UserContext into app's context
+     *
+     * @return {Promise<void>}
+     */
+    async run() {
         const user = await this.app.getContext(kUser)
-        this.app.registerContext(kUserContext, this.load(user.name, {headers:{...user.headers}})
+        this.app.registerContext(kUserContext, this.load(user.name, {headers: {...user.headers}})
             .catch(err => {
                 this.dispatch(err, kTopicError, kChannelLog);
                 throw err;//TODO throw critical error that prevents the whole application from proceeding
